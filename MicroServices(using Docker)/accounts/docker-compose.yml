@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  accounts:
+    image: akshay29729/accounts:latest
+    mem_limit: 700m
+    ports:
+      - "8080:8080"
+    networks:
+      - akshay-network
+    
+  loans:
+    image: akshay29729/loans:latest
+    mem_limit: 700m
+    ports:
+      - "8090:8090"
+    networks:
+      - akshay-network
+    
+  cards:
+    image: akshay29729/cards:latest
+    mem_limit: 700m
+    ports:
+      - "9001:9001"
+    networks:
+      - akshay-network
+    
+networks:
+  akshay-network:
